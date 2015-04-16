@@ -1,0 +1,18 @@
+<div class="row">
+  <div class="col-xs-4">
+  </div>
+  <div class="col-xs-4">
+    <%= simple_form_for [@cocktail, @dose] do |form| %>
+      <div class="row">
+       <%= form.input :description %>
+      </div>
+      <div class="row">
+        <%= form.input :ingredient_id, label: "ingredient", as: :select, collection: Ingredient.all %>
+      </div>
+      <div class="row">
+        <%= form.submit "Create it!", class: "btn btn-primary" %>
+      </div>
+    <% end %>
+  <div class="col-xs-4">
+  </div>
+</div>

@@ -1,0 +1,11 @@
+<div class="row">
+  <div class="col-xs-4">
+  </div>
+  <div class="col-xs-4">
+    <%= simple_form_for(@cocktail) do |form| %>
+      <%= form.input :name %>
+      <%= form.submit "Create it!", class: "btn btn-primary" %>
+    <% end %>
+  <div class="col-xs-4">
+  </div>
+</div>
