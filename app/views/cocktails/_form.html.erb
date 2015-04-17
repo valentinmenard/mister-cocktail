@@ -2,8 +2,9 @@
   <div class="col-xs-4">
   </div>
   <div class="col-xs-4">
-    <%= simple_form_for(@cocktail) do |form| %>
+    <%= simple_form_for(@cocktail, html: { multipart: true }) do |form| %>
       <%= form.input :name %>
+      <%= form.file_field :picture %>
       <%= form.submit "Create it!", class: "btn btn-primary" %>
     <% end %>
   <div class="col-xs-4">
