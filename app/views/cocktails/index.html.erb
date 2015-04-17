@@ -1,12 +1,13 @@
 <h1> List of the cocktails</h1>
-<div>
-  <% @cocktails.each_with_index do |cocktail, index| %>
-    <div class="row">
+<div class="container">
+  <div class="row">
+    <% @cocktails.each do |cocktail| %>
       <div class="col-xs-4">
-        <%= link_to (image_tag "image#{index}.jpg"), cocktail_path(cocktail) %>
+        <%= image_tag cocktail.picture.url(:medium), class: "img-circle" %>
+        <p><%= link_to cocktail.name, cocktail_path(cocktail) %></p>
       </div>
+    <% end %>
     </div>
-  <% end %>
 </div>
 
 <h3><%= link_to "Create a new Cocktail", new_cocktail_path %></h3>

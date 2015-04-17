@@ -10,9 +10,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 </head>
 </head>
-<body>
+<body id="<%= "#{params[:controller].gsub(/\//, '_')}_#{params[:action]}" %>">
 
- <div class="container text-center padded" >
+ <div class="container text-center" >
 
     <%= yield %>
 

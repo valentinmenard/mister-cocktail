@@ -4,3 +4,12 @@
  * Before writing in this file, look if there is not
  * already a Bootstrap SCSS variable that does the same job
  * ------------------------------------- */
+
+body {
+  background-color: $brand-danger;
+  color: #ECD1DF;
+}
+
+img {
+  opacity: 0.9;
+}
