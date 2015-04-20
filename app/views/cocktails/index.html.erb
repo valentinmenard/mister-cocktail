@@ -2,9 +2,9 @@
 <div class="container">
   <div class="row">
     <% @cocktails.each do |cocktail| %>
-      <div class="col-xs-4">
-        <%= image_tag cocktail.picture.url(:medium), class: "img-circle" %>
-        <p><%= link_to cocktail.name, cocktail_path(cocktail) %></p>
+      <div class="col-xs-4 picture">
+        <%= link_to image_tag(cocktail.picture.url(:medium)), cocktail_path(cocktail), class: "img-circle" %>
+        <p><%= cocktail.name %></p>
       </div>
     <% end %>
     </div>
